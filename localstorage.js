@@ -13,6 +13,11 @@ const getLocalStorage = async (tabs) => {
   }
 
   document.getElementById("localstorage").appendChild(document.createTextNode("Tamanho do Local Storage: " + t_localStorage));
+
+  let LSvalue = document.getElementById("localstorage");
+  LSvalue.setAttribute("value", t_localStorage);
+
+
 };
 
 function getActiveTab() {

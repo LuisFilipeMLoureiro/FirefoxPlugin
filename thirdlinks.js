@@ -5,8 +5,17 @@ const getDomains = async (tabs) => {
     method: "getDomains",
   });
 
+  let tlvalue = document.getElementById("domains");
+
   document.getElementById("domains")
     .appendChild(document.createTextNode("Número de links terceiros: " + response.data.domainsQuantity));
+
+
+  tlvalue.setAttribute("value", response.data.domainsQuantity);
+
+
+
+
 };
 
 

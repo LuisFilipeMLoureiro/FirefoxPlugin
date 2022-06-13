@@ -28,6 +28,8 @@ function showCookiesForTab(tabs) {
       let cookiesContent = document.createTextNode("Number of cookies: "+countCookies);
       cookiesText.appendChild(cookiesContent);
       numberOfCookies.appendChild(cookiesText);
+      var cookies = document.getElementById('number-cookies');
+      cookies.setAttribute("value", countCookies);
     } else {
       let p = document.createElement("p");
       let content = document.createTextNode("No cookies in this tab.");
@@ -35,8 +37,16 @@ function showCookiesForTab(tabs) {
 
       p.appendChild(content);
       parent.appendChild(p);
+
+      
     }
   });
+
+
+
+
+
+
 
   let li = document.createElement("li");
   let gettingSpace = browser.storage.storage.getBytesInUse({url: tab.url})
@@ -51,3 +61,4 @@ function getActiveTab() {
   return browser.tabs.query({currentWindow: true, active: true});
 }
 getActiveTab().then(showCookiesForTab);
+
