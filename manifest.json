@@ -1,0 +1,19 @@
+{
+  "name": "MyLittleSpy",
+  "manifest_version": 2,  
+  "version": "1.0",
+  "permissions": ["cookies", "<all_urls>", "tabs", "storage"],
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "plugin.html"
+  },
+  "icons": {
+    "48": "icons/img.jpg"
+  },
+  "content_scripts": [
+    {
+      "js": ["app.js"],
+      "matches": ["*://*/*"]      
+    }
+  ]
+}
