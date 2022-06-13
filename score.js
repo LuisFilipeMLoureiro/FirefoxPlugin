@@ -12,7 +12,7 @@ const outputscore = () => {
 	let cScore  = Number(numberofcookies);
 
 
-	var total_score = (1/(slScore * tlScore * cScore))*1000;
+	var total_score = (1/(slScore + tlScore + cScore))*1000;
 
 
 
